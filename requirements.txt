@@ -1,0 +1,13 @@
+numpy<1.24
+scipy
+scikit-image
+Pillow
+pydantic
+pyglet==1.5.15
+trimesh
+open3d==0.16.0
+pyyaml
+matplotlib
+tensorboard
+tqdm
+rich

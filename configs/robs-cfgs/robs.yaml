@@ -1,0 +1,64 @@
+obstacles:
+  0:
+    instance: 2f1a67cdabe2a70c492d9da2668ec34c
+    name: armchair
+    state:
+      orientation:
+      - 0
+      - 0
+      - 0
+      position:
+      - 1
+      - -2.2034468820604625
+      - 0.7
+  1:
+    instance: 8d9061d863268349db224de2961e777c
+    name: armchair
+    state:
+      orientation:
+      - 0
+      - 0
+      - 0
+      position:
+      - -0.9985746101777797
+      - -0.027813396062931164
+      - 0.7
+  2:
+    instance: '30'
+    name: pop_case
+    state:
+      orientation:
+      - 0
+      - 0
+      - 0
+      position:
+      - -1.1851248461486537
+      - -3.1255257138503167
+      - 0.7
+  3:
+    instance: fe613d2a63582e126e5a8ef1ff6470a3
+    name: loudspeaker
+    state:
+      orientation:
+      - 0
+      - 0
+      - 0
+      position:
+      - 0
+      - -1.221208746547771
+      - 0.7
+robot:
+  state_final:
+    position:
+    - -0.9876992898991152
+    - -2.352879062190161
+    - 0.3
+  state_initial:
+    orientation:
+    - 0
+    - 0
+    - -2.360105276107788
+    position:
+    - 1.6045619948306118
+    - 0.21918605119992662
+    - 0.3

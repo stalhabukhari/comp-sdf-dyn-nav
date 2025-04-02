@@ -1,0 +1,6 @@
+[submodule "Pointnet2_PyTorch"]
+	path = Pointnet2_PyTorch
+	url = https://github.com/stalhabukhari/Pointnet2_PyTorch
+[submodule "yolov5"]
+	path = yolov5
+	url = https://github.com/stalhabukhari/yolov5

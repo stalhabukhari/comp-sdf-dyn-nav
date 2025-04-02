@@ -1,0 +1,68 @@
+data:
+  scene_mesh_filepath: data-igibson/Rs_int_mesh_cc.obj
+  misc:
+    igibson_data_dir: data-igibson/to-igibson-data
+    deepsdf_data_dir: data-igibson/to-deepsdf-data
+  modalities:
+    - depth
+  camera:
+    w: 1200
+    h: 680
+    fx: 588.897264
+    fy: 588.897264
+    cx: 600
+    cy: 340
+
+model:
+  ckpt_dir: ckpts
+  scale_output: 0.14
+  positional_embedding:
+    scale_input: 0.05937489
+    num_embed_fns: 5
+  sdf_scene:
+    hidden_feature_size: 256
+    hidden_layers_block: 2
+    static_thresh: 0.09
+    ckpt: sdf-scene/sdf-static-Rs_int-step_340.000.pth
+  sdf_object:
+    latent_code_length: 256
+    network_specs:
+      dims: [ 512, 512, 512, 512, 512, 512, 512, 512 ]
+      dropout: [ 0, 1, 2, 3, 4, 5, 6, 7 ]
+      dropout_prob: 0.2
+      norm_layers: [ 0, 1, 2, 3, 4, 5, 6, 7 ]
+      latent_in: [ 4 ]
+      xyz_in_all: false
+      use_tanh: false
+      latent_dropout: false
+      weight_norm: true
+    ckpt: sdf-object/sdf-obj-trunc0.5-latest.pth
+    ckpt_latent: sdf-object/latent-code-trunc0.5-latest.pth
+    ckpt_latent_robot_body: sdf-object/latent-code-turtlebot4-bbox-tight-trunc0.5.pth
+  yolo:
+    ckpt: yolov5/yolov5l-ig-full-best.pt
+    dataset_cfg: yolov5/igibson-objects-full.yaml
+    conf_thres: 0.2
+    iou_thres: 0.2
+    img_size: 800
+
+memory:
+  radius_inner: 0.5
+  radius_outer: 1
+
+pc_aligner:
+  fps_samples_max: 3000
+  angle_inits: [ 0.0 ]
+  opt_iterations: 130
+  lr_init: 1.0
+  lr_decay: 0.99
+
+traj_opt:
+  opt_iters: 40
+  lr_init: 0.1
+  lr_decay: 0.876
+  safety_margin: 0.05
+  smoothing: 0.1
+  smoothing_robot_sdf: 0.25
+  robot_grid_extent_ow: 0.2
+  robot_grid_center_from_ground: 0.225

@@ -1,0 +1,45 @@
+# scene
+scene: igibson
+scene_id: Rs_int
+build_graph: true
+load_texture: true
+pybullet_load_texture: true
+trav_map_type: no_obj
+trav_map_resolution: 0.1
+trav_map_erosion: 3
+should_open_all_doors: true
+hide_robot: false
+
+# domain randomization
+texture_randomization_freq: null
+object_randomization_freq: null
+
+# robot
+robot:
+  name: Turtlebot
+  action_type: continuous
+  action_normalize: true
+  base_name: null
+  scale: 1.0
+  self_collision: false
+  rendering_params: null
+  controller_config:
+    base:
+      name: DifferentialDriveController
+
+# sensor spec
+output: [ rgb, depth ]
+# image
+# Primesense Carmine 1.09 short-range RGBD sensor
+# http://xtionprolive.com/primesense-carmine-1.09
+fisheye: false
+image_width: 1200
+image_height: 680
+vertical_fov: 60
+# depth
+depth_low: 0.35
+depth_high: 6.0
+
+# visual objects
+visible_target: false
+visible_path: false
