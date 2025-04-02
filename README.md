@@ -1,4 +1,4 @@
-# Differentiable Composite Neural Signed Distance Fields for Robot Navigation in Dynamic Indoor Environments
+# Differentiable Composite Neural Signed Distance Fields for Robot Navigation in Dynamic Indoor Environments (ICRA'25)
 
 <!-- Shields-->
 [<img src="https://img.shields.io/badge/Website-%230077B5.svg?&style=plastic&logo=home-assistant&logoColor=white&labelColor=black&color=white" />](https://stalhabukhari.github.io/icra25-sdf-dyn-nav)
@@ -19,7 +19,7 @@ pip install -r yolov5/requirements.txt
 pip install Pointnet2_PyTorch/pointnet2_ops_lib/
 ```
 
-Congfigure the iGibson environment: https://github.com/stalhabukhari/iGibson.git
+Congfigure the iGibson environment: https://github.com/stalhabukhari/iGibson
 
 
 ## Usage
