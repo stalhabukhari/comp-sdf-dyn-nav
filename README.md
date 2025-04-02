@@ -9,7 +9,7 @@
 ## Setup
 
 ```shell
-git clone --recursive https://github.com/stalhabukhari/obj-comp-sdf-dyn-nav.git
+git clone --recursive https://github.com/stalhabukhari/comp-sdf-dyn-nav.git
 conda create -n sdf-nav python=3.9
 conda install pytorch==1.13.1 torchvision==0.14.1 pytorch-cuda=11.7 -c pytorch -c nvidia
 pip install -r requirements.txt
